@@ -1,10 +1,13 @@
-import HomePage from "./pages/Home";
+import {Outlet} from "react-router-dom";
+
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <>
-      <HomePage/>
-    </>
+    <main className='w-full max-w-screen-xl m-auto'>
+      <Navbar/>
+      <Outlet/>
+    </main>
   );
 }
 

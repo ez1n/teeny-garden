@@ -1,0 +1,1 @@
+export const IconButtonStyle = 'cursor-pointer hover:text-brand-primary';
