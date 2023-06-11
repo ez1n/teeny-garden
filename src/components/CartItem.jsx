@@ -1,5 +1,7 @@
-import {formatNum} from "../utils/lib/common";
+import {Link} from "react-router-dom";
+
 import {IconButtonStyle} from "../utils/const/style";
+import {formatNum} from "../utils/lib/common";
 
 import {AiOutlineMinusSquare, AiOutlinePlusSquare} from 'react-icons/ai';
 import {BsFillTrashFill} from 'react-icons/bs';
@@ -7,7 +9,10 @@ import {BsFillTrashFill} from 'react-icons/bs';
 export default function CartItem({product: {id, image, title, option, price, quantity}}) {
   return (
     <li className='flex justify-between'>
-      <img className='w-48 h-64 object-cover rounded-lg' src={image} alt={title}/>
+      <Link to={`/products/${id}`}>
+        <img className='w-48 h-64 object-cover rounded-lg' src={image} alt={title}/>
+      </Link>
+
       <div className='flex-1 flex flex-col justify-center mx-4'>
         <h4 className='text-xl'>{title}</h4>
         <p className='text-xl font-bold text-brand-primary'>{option}</p>

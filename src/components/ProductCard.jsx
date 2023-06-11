@@ -1,8 +1,15 @@
+import {useNavigate} from "react-router-dom";
+
 import {formatNum} from "../utils/lib/common";
 
 export default function ProductCard({product: {id, image, title, price, category}}) {
+  const navigate = useNavigate()
+
   return (
-    <li className='flex flex-col justify-between h-96 p-2 rounded-lg shadow-md cursor-pointer transform-all duration-150 hover:scale-103'>
+    <li
+      className='flex flex-col justify-between h-96 p-2 rounded-lg shadow-md cursor-pointer transform-all duration-150 hover:scale-103'
+      onClick={() => navigate(`/products/${id}`)}
+    >
       <img className='h-4/5 object-cover' src={image} alt={title}/>
 
       <section className='flex-1 flex flex-col justify-center'>
