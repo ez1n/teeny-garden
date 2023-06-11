@@ -1,10 +1,7 @@
 import {useState} from "react";
 import {formatNum} from "../utils/lib/common";
 
-import {AiOutlineMinusSquare, AiOutlinePlusSquare} from "react-icons/ai";
-import {GiCancel} from "react-icons/gi";
 import Button from "../components/ui/Button";
-import {IconButtonStyle} from "../utils/const/style";
 import SelectedCard from "../components/SelectedCard";
 
 const DUMMY_DATA = {
@@ -18,7 +15,7 @@ const DUMMY_DATA = {
 }
 
 export default function ProductDetailPage() {
-  const {id, image, title, description, category, price, options} = DUMMY_DATA;
+  const {image, title, description, category, price, options} = DUMMY_DATA;
   const [selected, setSelected] = useState([]);
 
   const handleSelect = (e) => {

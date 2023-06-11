@@ -19,7 +19,7 @@ export default function ProductForm() {
   return (
     <section className='flex flex-col lg:flex-row my-4'>
       <div className='flex justify-center items-center m-2 border border-gray-200 rounded-sm lg:w-1/2'>
-        {image.url && <img className='object-contain' src={image.url} alt='product image'/>}
+        {image.url && <img className='object-contain' src={image.url} alt='product'/>}
         {!image.url && <p className='text-gray-400 text-xl p-16'>이미지를 등록해 주세요.</p>}
       </div>
 
