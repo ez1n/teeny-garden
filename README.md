@@ -2,6 +2,8 @@
 
 | 당신의 일상을 빛내줄 작은 정원, 티니 가든
 
+[🔗 홈페이지 바로가기](https://teeny-garden.netlify.app)
+
 <br/>
 
 ## 소개
@@ -29,8 +31,8 @@ yarn start
 - `Javascript`
 - `React`
 - `tailwind css`
-- `react-query`
 - `react-router`
+- `react-query`
 - `firebase`
 - `cloudinary`
 

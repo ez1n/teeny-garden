@@ -1,4 +1,6 @@
 import {CART_DUMMY_DATA} from "../DUMMY_DATA";
+import {Navigate} from "react-router-dom";
+import {useAuthContext} from "../context/AuthContext";
 
 import {AiFillPlusCircle} from "react-icons/ai";
 import {FaEquals} from "react-icons/fa";
@@ -10,9 +12,14 @@ import {SHIPPING} from "../utils/const/common";
 
 export default function CartPage() {
   const totalPrice = CART_DUMMY_DATA.reduce((sum, value) => sum + value.price, 0);
+  const {user} = useAuthContext();
 
   const onClick = () => {
 
+  }
+
+  if (!user) {
+    return <Navigate to='/' replace={false}/>
   }
 
   return (
