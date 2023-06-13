@@ -28,6 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@firebase/app", "npm:0.9.12"],\
             ["@testing-library/jest-dom", "npm:5.16.5"],\
             ["@testing-library/react", "virtual:27b0efb0680d412bb0803419a63c761311867debd44287bcc9fd6ea71c4c03def9d926c6224abfe71b5f1f0ba4535a9fe19ce1fc2a98b05b5137bf6ae75a82a6#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:27b0efb0680d412bb0803419a63c761311867debd44287bcc9fd6ea71c4c03def9d926c6224abfe71b5f1f0ba4535a9fe19ce1fc2a98b05b5137bf6ae75a82a6#npm:13.5.0"],\
@@ -17784,6 +17785,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["teeny-garden", "workspace:."],\
+            ["@firebase/app", "npm:0.9.12"],\
             ["@testing-library/jest-dom", "npm:5.16.5"],\
             ["@testing-library/react", "virtual:27b0efb0680d412bb0803419a63c761311867debd44287bcc9fd6ea71c4c03def9d926c6224abfe71b5f1f0ba4535a9fe19ce1fc2a98b05b5137bf6ae75a82a6#npm:13.4.0"],\
             ["@testing-library/user-event", "virtual:27b0efb0680d412bb0803419a63c761311867debd44287bcc9fd6ea71c4c03def9d926c6224abfe71b5f1f0ba4535a9fe19ce1fc2a98b05b5137bf6ae75a82a6#npm:13.5.0"],\

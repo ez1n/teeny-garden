@@ -1960,7 +1960,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@firebase/app@npm:0.9.12":
+"@firebase/app@npm:0.9.12, @firebase/app@npm:^0.9.12":
   version: 0.9.12
   resolution: "@firebase/app@npm:0.9.12"
   dependencies:
@@ -12868,6 +12868,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "teeny-garden@workspace:."
   dependencies:
+    "@firebase/app": ^0.9.12
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": ^13.0.0
     "@testing-library/user-event": ^13.2.1
