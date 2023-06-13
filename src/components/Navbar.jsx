@@ -2,7 +2,7 @@ import {useState} from "react";
 import {createPortal} from "react-dom";
 import {Link} from "react-router-dom";
 import {logout} from "../api/auth";
-import {useAuthContext} from "./context/AuthContext";
+import {useAuthContext} from "../context/AuthContext";
 
 import {IoMdFlower} from "react-icons/io";
 import {BsPencilSquare} from "react-icons/bs";
