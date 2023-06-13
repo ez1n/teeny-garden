@@ -1,17 +1,20 @@
 import {useState} from "react";
 import {createPortal} from "react-dom";
 import {Link} from "react-router-dom";
+import {logout} from "../api/auth";
+import {useAuthContext} from "./context/AuthContext";
 
 import {IoMdFlower} from "react-icons/io";
 import {BsPencilSquare} from "react-icons/bs";
 import Button from "./ui/Button";
 import CartBadge from "./CartBadge";
-import LoginModal from "./LoginModal";
+import AuthModal from "./auth/AuthModal";
 
 export default function Navbar() {
   const [loginOpen, setLoginOpen] = useState(false);
+  const {user} = useAuthContext();
 
-  const onOpen = () => setLoginOpen(prev => !prev);
+  const handleOpen = () => setLoginOpen(prev => !prev);
 
   return (
     <header className='flex justify-between p-4 border-b border-brand-secondary'>
@@ -22,12 +25,13 @@ export default function Navbar() {
 
       <nav className='flex items-center text-lg gap-5 font-semibold'>
         <Link to='/products'>Products</Link>
-        <Link to='/cart'><CartBadge/></Link>
-        <Link to='/products/new'><BsPencilSquare className='text-2xl'/></Link>
-        <Button type='button' text='Login' onClick={onOpen}/>
+        {user && <Link to='/cart'><CartBadge/></Link>}
+        {user?.isAdmin && <Link to='/products/new'><BsPencilSquare className='text-2xl'/></Link>}
+        {!user && <Button type='button' text='Login' onClick={handleOpen}/>}
+        {user && <Button type='button' text='Logout' onClick={logout}/>}
       </nav>
 
-      {loginOpen && createPortal(<LoginModal onClose={onOpen}/>, document.body)}
+      {loginOpen && createPortal(<AuthModal onClose={handleOpen}/>, document.body)}
     </header>
   )
 }
